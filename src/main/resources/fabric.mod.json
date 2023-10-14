@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "",
+  "authors": ["BlockyPenguin"],
+  "contact": {
+    "website": "https://mods.blockypenguin.com/${mod_id}",
+    "repo": "https://mods.blockypenguin.com/${mod_id}/source"
+  },
+  "license": "MIT",
+  "icon": "assets/${mod_id}/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [ "com.blockypenguin.mods.${mod_id}.PenguinFix" ],
+    "client": [ "com.blockypenguin.mods.${mod_id}.client.PenguinFixClient" ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
+  "custom": {
+    "modmenu": {
+      "update_checker": true
+    }
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
